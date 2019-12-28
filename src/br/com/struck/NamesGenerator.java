@@ -11,10 +11,12 @@ public class NamesGenerator {
 	private final static long quantity = 100;
 
 	public static void main(String[] args) throws IOException {
-		printList(getMultipleNamesAsList(quantity));
+		ArrayList<String> list = getMultipleNamesAsList(quantity);
+		Sorter.sortList(list);
+		printList(list);
 	}
 	
-	private static List<String> getMultipleNamesAsList(long quantity) {
+	private static ArrayList<String> getMultipleNamesAsList(long quantity) {
 		ArrayList<String> names = new ArrayList<>();
 		for(long i = 0; i < quantity; i++) {
 			names.add(getRandomName());
