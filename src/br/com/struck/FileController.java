@@ -13,10 +13,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileController {
+
 	public List<String> readFromFile(String filename) throws IOException {
 		List<String> list = new ArrayList<>();
 		File fileURL = new File(filename);
-		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileURL), "UTF8"));
+		BufferedReader br = new BufferedReader(
+						new InputStreamReader(new FileInputStream(fileURL), "UTF8"));
 
 		String line;
 		while ((line = br.readLine()) != null) {
@@ -43,7 +45,8 @@ public class FileController {
 	}
 
 	public int getNumberOfLinesFromFile(String filename) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File(filename)), "UTF8"));
+		BufferedReader br = new BufferedReader(
+						new InputStreamReader(new FileInputStream(new File(filename)), "UTF8"));
 		int numberOfLines = 0;
 		while (br.readLine() != null) {
 			numberOfLines++;
