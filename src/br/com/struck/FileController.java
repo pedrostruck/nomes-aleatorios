@@ -14,12 +14,13 @@ import java.util.List;
 
 public class FileController {
 
+	private static Randomness aleatorio = new Randomness();
+
 	public List<String> readFromFile(String filename) throws IOException {
 		List<String> list = new ArrayList<>();
 		File fileURL = new File(filename);
 		BufferedReader br = new BufferedReader(
 						new InputStreamReader(new FileInputStream(fileURL), "UTF8"));
-
 		String line;
 		while ((line = br.readLine()) != null) {
 			line = line.trim();
@@ -57,5 +58,16 @@ public class FileController {
 
 	public String getLineFromFile(String filename, int lineNumber) throws IOException {
 		return Files.readAllLines(Paths.get(filename)).get(lineNumber);
+	}
+
+	public String getRandomStringFromFile(String filename) {
+		int numberOfLines;
+		try {
+			numberOfLines = getNumberOfLinesFromFile(filename);
+			return getLineFromFile(filename, aleatorio.getRandomNumberInRange(1, numberOfLines));
+		} catch (IOException e) {
+			e.printStackTrace();
+			return "IOException";
+		}
 	}
 }
