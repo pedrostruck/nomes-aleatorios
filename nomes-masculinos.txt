@@ -1,33 +1,42 @@
+Anthony
 Antônio
 Arthur
 Benjamin
+Bento
 Benício
 Bernardo
 Bruno
 Bryan
 Caio
+Calebe
 Carlos
 Cauã
+Celso
 Daniel
 Davi
 Davi Lucas
 Davi Lucca
+David
 Eduardo
 Emanuel
+Emerson
 Enrico
 Enzo
 Enzo Gabriel
+Fábio
 Felipe
+Félix
+Filipe
 Francisco
 Gabriel
+Gael
 Guilherme
 Gustavo
 Heitor
 Henrique
 Isaac
-Joao
 Joaquim
-Jose
+José
 João
 João Lucas
 João Miguel
@@ -45,6 +54,7 @@ Matheus
 Miguel
 Murilo
 Nicolas
+Noah
 Paulo
 Pedro
 Pedro Henrique
@@ -56,6 +66,9 @@ Samuel
 Theo
 Thiago
 Thomas
+Théo
 Vicente
-Vinicius
+Vinícius
 Vitor
+Wellington
+William

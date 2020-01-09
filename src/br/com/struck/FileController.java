@@ -16,23 +16,24 @@ public class FileController {
 
 	private static Randomness aleatorio = new Randomness();
 
-	public List<String> readFromFile(String filename) throws IOException {
+	public List<String> getLinesFromFile(String filename) {
 		List<String> list = new ArrayList<>();
-		File fileURL = new File(filename);
-		BufferedReader br = new BufferedReader(
-						new InputStreamReader(new FileInputStream(fileURL), "UTF8"));
-		String line;
-		while ((line = br.readLine()) != null) {
-			line = line.trim();
-			if (!list.contains(line)) {
-				list.add(line);
+		try {
+			File fileURL = new File(filename);
+			BufferedReader br = new BufferedReader(
+							new InputStreamReader(new FileInputStream(fileURL), "UTF8"));
+			String line;
+			while ((line = br.readLine()) != null) {
+				list.add(line.trim());
 			}
+			br.close();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		br.close();
 		return list;
 	}
 
-	public void writeToFile(String filename, List<String> list) {
+	public void writeStringListToFile(String filename, List<String> list) {
 		Charset utf8 = StandardCharsets.UTF_8;
 		try {
 			Files.write(Paths.get(filename + "_output.txt"), list, utf8);
@@ -42,7 +43,7 @@ public class FileController {
 	}
 
 	public String getOutputName(String filename) {
-		return filename = filename.substring(0, filename.lastIndexOf("."));
+		return filename.substring(0, filename.lastIndexOf("."));
 	}
 
 	public int getNumberOfLinesFromFile(String filename) throws IOException {
@@ -70,4 +71,19 @@ public class FileController {
 			return "IOException";
 		}
 	}
+
+	public void trimFile(String filename) {
+		try {
+			BufferedReader br = new BufferedReader(
+							new InputStreamReader(new FileInputStream(new File(filename)), "UTF8"));
+			String str;
+			while ((str = br.readLine().trim()) != null) {
+				System.out.println(str);
+			}
+			br.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 }
