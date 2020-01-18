@@ -1,4 +1,5 @@
 Adriana
+Agatha
 Alice
 Aline
 Alícia
@@ -7,7 +8,9 @@ Ana
 Ana Beatriz
 Ana Clara
 Ana Júlia
+Ana Laura
 Ana Luiza
+Antonella
 Antonia
 Beatriz
 Bianca
@@ -16,6 +19,8 @@ Camila
 Catarina
 Cecília
 Clara
+Elisa
+Eloá
 Emanuelly
 Esther
 Fernanda
@@ -29,7 +34,6 @@ Isabelly
 Isadora
 Isis
 Jessica
-Julia
 Juliana
 Júlia
 Lara
@@ -37,24 +41,29 @@ Larissa
 Laura
 Lavínia
 Letícia
+Liz
 Lorena
 Luciana
 Luiza
 Lívia
+Maitê
 Manuela
 Marcia
 Maria
 Maria Alice
+Maria Cecília
 Maria Clara
 Maria Eduarda
 Maria Fernanda
+Maria Helena
+Maria Júlia
 Maria Luiza
 Mariana
 Marina
 Marinete
 Melissa
 Nicole
-Patricia
+Patrícia
 Rafaela
 Rebeca
 Sandra
@@ -63,7 +72,7 @@ Sophia
 Valdete
 Valentina
 Vanessa
-Vânia
 Verônica
 Vitória
+Vânia
 Yasmin

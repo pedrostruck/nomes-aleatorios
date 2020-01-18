@@ -1,4 +1,4 @@
-package br.com.struck;
+package br.com.struck.enums;
 
 public enum ArquivosEnum {
 	MASC("nomes-masculinos.txt"),

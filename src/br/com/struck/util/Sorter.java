@@ -1,4 +1,4 @@
-package br.com.struck;
+package br.com.struck.util;
 
 import java.util.Comparator;
 import java.util.List;
