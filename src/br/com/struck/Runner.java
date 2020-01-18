@@ -19,9 +19,7 @@ public class Runner {
 				queryValues.add(qg.getValueLine(estudante));
 			} else {
 				String line = qg.getValueLine(estudante);
-				line = line.substring(0, line.lastIndexOf(","));
-				line = line + ";";
-				queryValues.add(line);
+				queryValues.add(line.substring(0, line.lastIndexOf(",")) + ";");
 			}
 		}
 		printList(queryValues);
