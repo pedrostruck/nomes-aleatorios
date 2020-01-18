@@ -13,7 +13,7 @@ import java.util.List;
 
 public class FileController {
 
-	private static Randomness aleatorio = new Randomness();
+	private static RandomGenerator aleatorio = new RandomGenerator();
 
 	public List<String> getLinesFromFileAsList(String filename) {
 		List<String> list = new ArrayList<>();
@@ -92,7 +92,7 @@ public class FileController {
 	public String getRandomStringFromFile(String filename) {
 		int numberOfLines;
 		numberOfLines = getNumberOfLinesFromFile(filename);
-		return getLineFromFile(filename, aleatorio.getRandomNumberInRange(1, numberOfLines));
+		return getLineFromFile(filename, aleatorio.getRandomIntInRange(1, numberOfLines));
 	}
 
 	public void trimFile(String filename) {

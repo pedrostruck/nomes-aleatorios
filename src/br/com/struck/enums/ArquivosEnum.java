@@ -1,9 +1,9 @@
 package br.com.struck.enums;
 
 public enum ArquivosEnum {
-	MASC("nomes-masculinos.txt"),
-	FEM("nomes-femininos.txt"),
-	SN("sobrenomes.txt");
+	MASC("resources/nomes-masculinos.txt"),
+	FEM("resources/nomes-femininos.txt"),
+	SN("resources/sobrenomes.txt");
 	
 	private String nomeArquivo;
 	
