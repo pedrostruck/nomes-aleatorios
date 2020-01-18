@@ -2,9 +2,13 @@ package br.com.struck;
 
 import java.util.ArrayList;
 
+import br.com.struck.enums.ArquivosEnum;
+import br.com.struck.util.FileController;
+import br.com.struck.util.Randomness;
+
 public class NamesGenerator {
 	private static final FileController fc = new FileController();
-	private static Randomness aleatorio = new Randomness();
+	private static Randomness random = new Randomness();
 
 	public ArrayList<String> getMultipleNamesAsList(long quantity) {
 		ArrayList<String> names = new ArrayList<>();
@@ -16,23 +20,27 @@ public class NamesGenerator {
 
 	public String getRandomFullName() {
 		StringBuilder name = new StringBuilder();
-		name.append(getFirstName());
-		name.append(getSurname());
+		name.append(getFirstName()).append(getSurnames());
 		return name.toString();
 	}
 
 	public String getFirstName() {
-		return aleatorio.flipACoin() ? fc.getRandomStringFromFile(ArquivosEnum.MASC.nome())
+		return random.flipACoin() ? fc.getRandomStringFromFile(ArquivosEnum.MASC.nome())
 						: fc.getRandomStringFromFile(ArquivosEnum.FEM.nome());
 	}
 
-	public String getSurname() {
+	public String getSurnames() {
 		String firstSurname = fc.getRandomStringFromFile(ArquivosEnum.SN.nome());
-		String secondSurname;
-		do {
-			secondSurname = fc.getRandomStringFromFile(ArquivosEnum.SN.nome());
-		} while (firstSurname.equals(secondSurname));
+		String secondSurname = getDifferentSurname(firstSurname);
 		return " " + firstSurname + " " + secondSurname;
+	}
+
+	public String getDifferentSurname(String firstSurname) {
+		String otherSurname;
+		do {
+			otherSurname = fc.getRandomStringFromFile(ArquivosEnum.SN.nome());
+		} while (firstSurname.equals(otherSurname));
+		return otherSurname;
 	}
 
 }

@@ -3,13 +3,14 @@ package br.com.struck;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.struck.util.Sorter;
+
 public class Runner {
 
 	private static NamesGenerator ng = new NamesGenerator();
 
 	public static void main(String[] args) {
-		long quantity = 100;
-		ArrayList<String> list = ng.getMultipleNamesAsList(quantity);
+		ArrayList<String> list = ng.getMultipleNamesAsList(Long.valueOf(args[0]));
 		Sorter.sortList(list);
 		printList(list);
 	}
